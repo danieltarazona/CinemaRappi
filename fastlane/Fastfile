@@ -81,4 +81,10 @@ platform :ios do
     )
     generate_report(projectName)
   end
+
+  desc "Generate Documentation"
+  lane :jazz do 
+    puts "Generating Docs ..."
+    sh jazzy
+  end 
 end

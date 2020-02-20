@@ -33,6 +33,11 @@ fastlane ios scanner
 Generate XCHTML Report
 
 Build for Tests
+### ios jazz
+```
+fastlane ios jazz
+```
+Generate Documentation
 
 ----
 

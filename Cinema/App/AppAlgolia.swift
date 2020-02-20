@@ -1,4 +1,3 @@
-//
 //  AppAlgolia.swift
 //  Cinema
 //
