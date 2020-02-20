@@ -1,0 +1,9 @@
+# Paths to ignore during linting. Takes precedence over `included`.
+excluded: 
+  - Carthage
+  - Pods
+
+line_length: 100
+
+disabled_rules:
+- identifier_name

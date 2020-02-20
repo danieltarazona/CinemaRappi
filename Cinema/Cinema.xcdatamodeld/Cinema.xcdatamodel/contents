@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Images" representedClassName="Images" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="path" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MovieDetails" representedClassName="MovieDetails" syncable="YES">
+        <attribute name="adult" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="backdropPath" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="budget" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="homepage" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imdbid" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="originalLanguage" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="originalTitle" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="overview" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="popularity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="posterPath" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="releaseDate" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="revenue" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="tagline" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="title" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="video" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="voteCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Pages" representedClassName="Pages" syncable="YES">
+        <attribute name="page" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalPages" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalResults" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Results" inverseName="pages" inverseEntity="Results"/>
+    </entity>
+    <entity name="Results" representedClassName="Results" syncable="YES">
+        <attribute name="adult" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="backdropPath" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="firstAirDate" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="objectId" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="originalTitle" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="overview" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="popularity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="posterPath" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="releaseDate" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="title" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="video" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="voteCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="pages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pages" inverseName="results" inverseEntity="Pages"/>
+    </entity>
+    <entity name="Seasons" representedClassName="Seasons" syncable="YES">
+        <attribute name="airDate" optional="YES" attributeType="String"/>
+        <attribute name="episodeCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="overview" optional="YES" attributeType="String"/>
+        <attribute name="posterPath" optional="YES" attributeType="String"/>
+        <attribute name="seasonNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="detailstv" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TVDetails" inverseName="seasons" inverseEntity="TVDetails"/>
+    </entity>
+    <entity name="TVDetails" representedClassName="TVDetails" syncable="YES">
+        <attribute name="backdropPath" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="firstAirDate" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="homepage" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="inProduction" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastAirDate" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="numberOfEpisodes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="numberOfSeasons" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="originalLanguage" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="originalName" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="overview" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="popularity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="posterPath" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="status" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="type" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="voteCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="seasons" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Seasons" inverseName="detailstv" inverseEntity="Seasons"/>
+    </entity>
+    <entity name="VideosResults" representedClassName="VideosResults" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="iso639_1" optional="YES" attributeType="String"/>
+        <attribute name="iso3166_1" optional="YES" attributeType="String"/>
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="site" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Images" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="MovieDetails" positionX="-18" positionY="99" width="128" height="343"/>
+        <element name="Pages" positionX="-54" positionY="9" width="128" height="103"/>
+        <element name="Results" positionX="0" positionY="171" width="128" height="283"/>
+        <element name="Seasons" positionX="-36" positionY="45" width="128" height="163"/>
+        <element name="TVDetails" positionX="18" positionY="180" width="128" height="328"/>
+        <element name="VideosResults" positionX="-18" positionY="135" width="128" height="163"/>
+    </elements>
+</model>

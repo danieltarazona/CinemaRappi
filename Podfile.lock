@@ -1,0 +1,45 @@
+PODS:
+  - InstantSearchClient (7.0.3)
+  - InstantSearchCore (6.6.0):
+    - InstantSearchClient (~> 7.0)
+    - InstantSearchInsights (~> 2.3)
+    - Logging
+  - InstantSearchInsights (2.3.2)
+  - Logging (1.2.0)
+  - SwiftLint (0.34.0)
+  - SwiftyBeaver (1.7.1)
+  - Vaccine (0.15.1)
+  - youtube-ios-player-helper (0.1.6)
+
+DEPENDENCIES:
+  - InstantSearchClient (= 7.0.3)
+  - InstantSearchCore (= 6.6.0)
+  - SwiftLint (= 0.34.0)
+  - SwiftyBeaver (= 1.7.1)
+  - Vaccine (= 0.15.1)
+  - youtube-ios-player-helper (= 0.1.6)
+
+SPEC REPOS:
+  trunk:
+    - InstantSearchClient
+    - InstantSearchCore
+    - InstantSearchInsights
+    - Logging
+    - SwiftLint
+    - SwiftyBeaver
+    - Vaccine
+    - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  InstantSearchClient: 289fad11a1bd3bab759bbd80376b3a30a897cbee
+  InstantSearchCore: 0f41f23c0b60d340ea0c6bc65195cc5c08be9642
+  InstantSearchInsights: 62d5850fa7c7ae768cab621117b855e73c441aaf
+  Logging: 7838d379d234d7e5ae1265fa02804a9084caf04c
+  SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
+  SwiftyBeaver: da5e573ad583586c18236324c36900990afe1733
+  Vaccine: 9597d99f45c18f331f2c5246c0483bbe5ed119fe
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+
+PODFILE CHECKSUM: f070a5f4ec38df2c9e0e5ad0e1035f3c9e96890f
+
+COCOAPODS: 1.8.4
